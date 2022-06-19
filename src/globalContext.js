@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   const [won, setWon] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [attempts, setAttempts] = useState(0);
+  const [currentRow, setCurrentRow] = useState(1);
 
   useEffect(() => {
     const index = Math.floor(Math.random() * (data.length - 1));
@@ -27,6 +28,8 @@ const AppProvider = ({ children }) => {
         setShowModal,
         attempts,
         setAttempts,
+        currentRow,
+        setCurrentRow,
       }}
     >
       {children}
